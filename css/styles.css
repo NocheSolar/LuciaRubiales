@@ -1,8 +1,10 @@
 /*General*/
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .index {
     background-image: url("../img/fondo.jpg");
     background-repeat: no-repeat;
@@ -10,117 +12,101 @@
     background-position: center center;
     background-attachment: fixed;
 }
+
 .contacto {
-    background-image: url("../img/fondo4.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
-.productos{
+
+.productos {
     background-image: url("../img/fondo8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
-.promociones{
-    background-image: linear-gradient(to bottom, rgb(59, 57, 57) , rgb(158, 158, 135));
+
+.promociones {
+    background-image: linear-gradient(to bottom, rgb(59, 57, 57), rgb(158, 158, 135));
 }
-.nosotros{
-    background-image: linear-gradient(to right, rgb(36, 34, 34) , rgb(224, 224, 182));
+
+.nosotros {
+    background-image: linear-gradient(to right, rgb(36, 34, 34), rgb(224, 224, 182));
 
 }
-header{
-    background-image: url("../img/sierras.jpg");
-    background-repeat: no-repeat;
+
+.dark-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.jpg);
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-attachment: fixed;
-}
-/*Header y Nav*/
-.navBar{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+    background-repeat: no-repeat;
+
 }
 
-a{
-    text-decoration: none;
-    padding: 8px;
-}
-.listaNav{
-    background-color: rgb(213, 228, 212);
-    text-transform: uppercase;
-    border: 10px solid rgb(177, 154, 107);
-    padding: 8px;
-}
-.listaNav:hover {
-    background-color: rgb(107, 41, 212);
-    border:10px double rgba(46, 14, 97, 0.87);
-}
-.nombreHeader{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding-top: 30px;
-    
-}
-h2, h1{
-    font-size: 50px;
-    color: rgb(245, 152, 30);
-    border-color: black;
-    text-align: center;
-}
-h4{
-    color: rgb(245, 152, 30);
-    font-size: 25px;
-}
-h3{
-    font-size: 35px;
-    color: rgb(245, 152, 30);
-    text-align: center;
-}
-/*Index*/
-.subtituloIndex {
-    padding: 10px;
-    color:rgb(245, 152, 30);
-    font-size: 20px;
-}
-.imgIndex{
-    display: flex;
-    flex-direction: center;
-    border: solid 2px;
-}
-.principal{
-    text-align: center;
+/*imagen Hero*/
+#hero .container {
+    height: 80vh;
 }
 
-.textoPrincipal{
-    color: white;
-    text-align: justify;
-    font-size: 20px;
+#position {
+    position: fixed;
+    z-index: 999;
 }
+
+.bg-dark {
+    background-color: transparent !important;
+    height: 8vh;
+}
+
+.customFont {
+    font-family: 'Vujahday Script', cursive;
+}
+
+.hero__title-text {
+    font-size: 10rem !important;
+    color: rgb(124, 200, 206);
+}
+
+.hero__title-subtext {
+    font-size: 2.5rem !important;
+    color: rgb(124, 200, 206);
+}
+
+.mainIndex {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
 /*Nosotros*/
-.mainArticle{
+.mainArticle {
     margin: 20px;
     margin-right: 20px;
 
 }
+
 .historiaArticle {
     margin: 5px 5px 5px 5px;
 
 }
-.textoHistoria, .textoArticle{
-   text-align: justify;
+
+.textoHistoria,
+.textoArticle {
+    text-align: justify;
 
 
 }
-.historiaArticle .imgArticle{
+
+.historiaArticle .imgArticle {
     display: flex;
     flex-flow: row;
 }
-.imgArticle{
+
+.imgArticle {
     height: 20%;
     width: 230px;
     margin-right: 20px;
@@ -128,62 +114,79 @@ h3{
     animation-iteration-count: 1;
     animation-duration: 4s;
 }
-.doImg{
+
+.doImg {
     animation-name: desaparecer;
     animation-iteration-count: 1;
     animation-duration: 4s;
 }
+
 @keyframes aparecer {
     from {
         opacity: 0;
     }
-    15%, 45% {
+
+    15%,
+    45% {
         opacity: .15;
     }
-    25%, 75% {
+
+    25%,
+    75% {
         opacity: .35;
     }
+
     to {
         opacity: 50;
     }
 }
+
 @keyframes desaparecer {
     from {
         opacity: 100;
     }
-    15%, 45% {
+
+    15%,
+    45% {
         opacity: .35;
     }
-    25%, 75% {
+
+    25%,
+    75% {
         opacity: .15;
     }
+
     to {
         opacity: 50;
     }
 }
+
 .doImg {
 
     height: 20%;
     width: 230px;
     margin-right: 20px;
 }
+
 .sectionNosotros {
     margin-top: 40px;
 }
-.historiaArticle .doImg{
+
+.historiaArticle .doImg {
     float: left;
     margin: 5px 10px 5px 5px;
 }
 
 /*Productos*/
-.principalProductos{
+.principalProductos {
     margin: 20px;
     display: grid;
-    grid-template-areas: 
-    "producto1 producto2"
-    "producto3 producto4"
-    "producto5 producto6";
+    grid-template-areas:
+        "producto1 producto2"
+        "producto3 producto4"
+        "producto5 producto6";
 }
+
 .salamines {
     grid-area: producto1;
 }
@@ -196,105 +199,76 @@ h3{
     grid-area: producto3;
 }
 
-.picadas{
+.picadas {
     grid-area: producto4;
 }
 
-.chocolates{
+.chocolates {
     grid-area: producto5;
 }
 
-.proximamente{
+.proximamente {
     grid-area: producto6;
 }
 
-.imgProductos{
+.imgProductos {
     height: 70%;
     width: 70%;
 }
 
-.imgSalamines:hover, .imgQuesos:hover, .imgDulce:hover, .imgPicada:hover, .imgChocolates:hover, .imgMiel:hover{
+.imgSalamines:hover,
+.imgQuesos:hover,
+.imgDulce:hover,
+.imgPicada:hover,
+.imgChocolates:hover,
+.imgMiel:hover {
     transform: scale(1.5);
 }
+
 /*Promociones*/
 
 
 /*Contacto*/
-.principalContacto{
+.principalContacto {
     display: flex;
     flex-direction: wrap;
 }
-.formulario{
+
+.formulario {
     margin: 30px;
 }
-/*Footer*/
-footer{
-    display: flex;
-    flex-direction: wrap;
-    margin: 100px;
-}
 
+/*Footer
+footer{
+    background-color: #3f51b5"
+}*/
 .listaFooter {
     list-style: none;
-    color: white;
-    text-align: center;
 }
 
-@media screen and (min-width: 600px){
-    .navUl{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        list-style-type: none;
-        font-size: 18px;      
-    }
-    .navBar{
-   
-        height: 100px;
-        padding: 40px;
-        justify-content: center;
-    }
-    .nombreHeader {
-        display: flex;
-        flex-wrap: row;
-        justify-content: center;
-        padding-top: 20px;
-    }
-    .tituloNav{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    .imgIndex{
-        margin: auto
-    }
-    
-    .textoPrincipal{
-        color: white;
-        text-align: justify;
-        font-size: 20px;
-    }
+@media screen and (min-width: 600px) {
 
-    .nosotros{
-        background-image: linear-gradient(to right, rgb(36, 34, 34) , rgb(224, 224, 182));
+    .nosotros {
+        background-image: linear-gradient(to right, rgb(36, 34, 34), rgb(224, 224, 182));
 
     }
-    .tituloNav{
+
+    .tituloNav {
         margin: 5px;
     }
-    .historiaArticle{
+
+    .historiaArticle {
         display: flex;
         flex-direction: row;
     }
-    .sectionNosotros{
+
+    .sectionNosotros {
         display: flex;
         flex-direction: row;
     }
-    .mainArticle{
+
+    .mainArticle {
         text-align: justify;
     }
-    footer{
-        margin: 200px;
-        padding-left: 350px;
-    }
+
 }
