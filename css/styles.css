@@ -178,38 +178,6 @@
 }
 
 /*Productos*/
-.principalProductos {
-    margin: 20px;
-    display: grid;
-    grid-template-areas:
-        "producto1 producto2"
-        "producto3 producto4"
-        "producto5 producto6";
-}
-
-.salamines {
-    grid-area: producto1;
-}
-
-.quesos {
-    grid-area: producto2;
-}
-
-.dulces {
-    grid-area: producto3;
-}
-
-.picadas {
-    grid-area: producto4;
-}
-
-.chocolates {
-    grid-area: producto5;
-}
-
-.proximamente {
-    grid-area: producto6;
-}
 
 .imgProductos {
     height: 70%;
