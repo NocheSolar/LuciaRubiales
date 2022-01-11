@@ -57,7 +57,7 @@
     z-index: 999;
 }
 
-.bg-dark {
+.navbar {
     background-color: transparent !important;
     height: 8vh;
 }
@@ -67,7 +67,7 @@
 }
 
 .hero__title-text {
-    font-size: 10rem !important;
+    font-size: 5rem !important;
     color: rgb(124, 200, 206);
 }
 
@@ -77,10 +77,31 @@
 }
 
 .mainIndex {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
-
+.tituloIndex{
+    margin: 8px;
+    padding: 15;
+    text-align: center;
+    animation-name: colores;
+    animation-duration: 10s;
+}
+  
+  @keyframes colores {
+    from {background-color: rgb(167, 18, 197);}
+    to {background-color: rgb(124, 200, 206)}
+  }
+.carousel-item{
+    height: auto;
+}
+.carousel-inner img {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
 
 /*Nosotros*/
 .mainArticle {
@@ -176,7 +197,9 @@
     float: left;
     margin: 5px 10px 5px 5px;
 }
-
+.tituloNosotros{
+    text-align: center;
+}
 /*Productos*/
 
 .imgProductos {
@@ -205,16 +228,26 @@
 .formulario {
     margin: 30px;
 }
+.btn-primary:hover {
+    background-color: rgb(131, 4, 170);
+}
 
-/*Footer
+form{
+    font-size: 25px;
+}
+/*Footer*/
 footer{
-    background-color: #3f51b5"
-}*/
+    background-color: rgba(3, 2, 2, 0.2) !important;
+}
 .listaFooter {
     list-style: none;
 }
 
 @media screen and (min-width: 600px) {
+    .hero__title-text {
+        font-size: 10rem !important;
+        color: rgb(124, 200, 206);
+    }
 
     .nosotros {
         background-image: linear-gradient(to right, rgb(36, 34, 34), rgb(224, 224, 182));
@@ -239,4 +272,26 @@ footer{
         text-align: justify;
     }
 
+    .carousel-inner img {
+        width: 100%;
+        height: 560px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .mainIndex {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .tituloIndex{
+        margin: 15px;
+        padding: 30px;
+        text-align: center;
+        animation-name: colores;
+        animation-duration: 10s;
+    }
+    table{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
