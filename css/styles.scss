@@ -61,7 +61,7 @@
     height: 80vh;
 
     .hero__title-text {
-        font-size: 5rem !important;
+        font-size: 7rem !important;
         color: rgb(124, 200, 206);
     }
 
@@ -217,19 +217,22 @@
 
 
 /*Contacto*/
-.principalContacto {
-    display: flex;
-    flex-direction: wrap;
+.containerContacto {
+    height: 100vh;
+    .principalContacto {
+        display: flex;
+        flex-direction: wrap;
 
-    .contactoDiv {
-        margin: 30px;
-    }
+        .contactoDiv {
+            margin: 30px;
+        }
 
-    form {
-        font-size: 25px;
+        form {
+            font-size: 25px;
 
-        .btn-primary:hover {
-            background-color: rgb(131, 4, 170);
+            .btn-primary:hover {
+                background-color: rgb(131, 4, 170);
+            }
         }
     }
 }

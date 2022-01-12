@@ -65,7 +65,7 @@
 }
 
 .container .hero__title-text {
-  font-size: 5rem !important;
+  font-size: 7rem !important;
   color: #7cc8ce;
 }
 
@@ -268,7 +268,11 @@
 }
 
 /*Contacto*/
-.principalContacto {
+.containerContacto {
+  height: 100vh;
+}
+
+.containerContacto .principalContacto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,15 +282,15 @@
           flex-direction: wrap;
 }
 
-.principalContacto .contactoDiv {
+.containerContacto .principalContacto .contactoDiv {
   margin: 30px;
 }
 
-.principalContacto form {
+.containerContacto .principalContacto form {
   font-size: 25px;
 }
 
-.principalContacto form .btn-primary:hover {
+.containerContacto .principalContacto form .btn-primary:hover {
   background-color: #8304aa;
 }
 
