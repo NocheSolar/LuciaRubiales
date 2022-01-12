@@ -6,14 +6,13 @@
           box-sizing: border-box;
 }
 
-.index {
-  background-image: url("../img/fondo.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-}
-
+/*.index {
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}*/
 .contacto {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../img/fondo4.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
@@ -41,18 +40,19 @@
   background-image: linear-gradient(to right, #242222, #e0e0b6);
 }
 
-.dark-bg {
+.hero {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url(../img/background.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  height: 80vh;
 }
 
-/*imagen Hero*/
-#hero .container {
-  height: 80vh;
+.hero .navbar {
+  background-color: transparent !important;
+  height: 8vh;
 }
 
 #position {
@@ -60,23 +60,22 @@
   z-index: 999;
 }
 
-.navbar {
-  background-color: transparent !important;
-  height: 8vh;
+.container {
+  height: 80vh;
 }
 
-.customFont {
-  font-family: 'Vujahday Script', cursive;
-}
-
-.hero__title-text {
+.container .hero__title-text {
   font-size: 5rem !important;
   color: #7cc8ce;
 }
 
-.hero__title-subtext {
+.container .hero__title-subtext {
   font-size: 2.5rem !important;
   color: #7cc8ce;
+}
+
+.customFont {
+  font-family: 'Vujahday Script', cursive;
 }
 
 .mainIndex {
@@ -84,7 +83,7 @@
   margin-right: 20px;
 }
 
-.tituloIndex {
+.mainIndex .tituloIndex {
   margin: 8px;
   padding: 15;
   text-align: center;
@@ -92,6 +91,24 @@
           animation-name: colores;
   -webkit-animation-duration: 10s;
           animation-duration: 10s;
+}
+
+.mainIndex .carousel-item {
+  height: auto;
+}
+
+.mainIndex img {
+  width: 50%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @-webkit-keyframes colores {
@@ -112,40 +129,18 @@
   }
 }
 
-.carousel-item {
-  height: auto;
-}
-
-.carousel-inner img {
-  width: 50%;
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 /*Nosotros*/
 .mainArticle {
   margin: 20px;
   margin-right: 20px;
 }
 
-.historiaArticle {
+.mainArticle .tituloNosotros {
+  text-align: center;
+}
+
+.mainArticle .historiaArticle {
   margin: 5px 5px 5px 5px;
-}
-
-.textoHistoria,
-.textoArticle {
-  text-align: justify;
-}
-
-.historiaArticle .imgArticle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -155,7 +150,7 @@
           flex-flow: row;
 }
 
-.imgArticle {
+.mainArticle .historiaArticle .imgArticle {
   height: 20%;
   width: 230px;
   margin-right: 20px;
@@ -167,7 +162,19 @@
           animation-duration: 4s;
 }
 
-.doImg {
+.mainArticle .historiaArticle .textoHistoria,
+.mainArticle .historiaArticle .textoArticle {
+  text-align: justify;
+}
+
+.mainArticle .sectionNosotros {
+  margin-top: 40px;
+}
+
+.mainArticle .sectionNosotros .doImg {
+  height: 20%;
+  width: 230px;
+  margin-right: 20px;
   -webkit-animation-name: desaparecer;
           animation-name: desaparecer;
   -webkit-animation-iteration-count: 1;
@@ -244,25 +251,6 @@
   }
 }
 
-.doImg {
-  height: 20%;
-  width: 230px;
-  margin-right: 20px;
-}
-
-.sectionNosotros {
-  margin-top: 40px;
-}
-
-.historiaArticle .doImg {
-  float: left;
-  margin: 5px 10px 5px 5px;
-}
-
-.tituloNosotros {
-  text-align: center;
-}
-
 /*Productos*/
 .imgProductos {
   height: 70%;
@@ -279,7 +267,6 @@
           transform: scale(1.5);
 }
 
-/*Promociones*/
 /*Contacto*/
 .principalContacto {
   display: -webkit-box;
@@ -291,16 +278,16 @@
           flex-direction: wrap;
 }
 
-.formulario {
+.principalContacto .contactoDiv {
   margin: 30px;
 }
 
-.btn-primary:hover {
-  background-color: #8304aa;
+.principalContacto form {
+  font-size: 25px;
 }
 
-form {
-  font-size: 25px;
+.principalContacto form .btn-primary:hover {
+  background-color: #8304aa;
 }
 
 /*Footer*/
@@ -308,7 +295,7 @@ footer {
   background-color: rgba(3, 2, 2, 0.2) !important;
 }
 
-.listaFooter {
+footer .listaFooter {
   list-style: none;
 }
 

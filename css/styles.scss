@@ -5,13 +5,13 @@
     box-sizing: border-box;
 }
 
-.index {
+/*.index {
     background-image: url("../img/fondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
-}
+}*/
 
 .contacto {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
@@ -38,18 +38,18 @@
 
 }
 
-.dark-bg {
+.hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../img/background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-
-}
-
-/*imagen Hero*/
-#hero .container {
     height: 80vh;
+
+    .navbar {
+        background-color: transparent !important;
+        height: 8vh;
+    }
 }
 
 #position {
@@ -57,89 +57,105 @@
     z-index: 999;
 }
 
-.navbar {
-    background-color: transparent !important;
-    height: 8vh;
+.container {
+    height: 80vh;
+
+    .hero__title-text {
+        font-size: 5rem !important;
+        color: rgb(124, 200, 206);
+    }
+
+    .hero__title-subtext {
+        font-size: 2.5rem !important;
+        color: rgb(124, 200, 206);
+    }
 }
 
 .customFont {
     font-family: 'Vujahday Script', cursive;
 }
 
-.hero__title-text {
-    font-size: 5rem !important;
-    color: rgb(124, 200, 206);
-}
 
-.hero__title-subtext {
-    font-size: 2.5rem !important;
-    color: rgb(124, 200, 206);
-}
 
 .mainIndex {
     margin-left: 20px;
     margin-right: 20px;
+
+    .tituloIndex {
+        margin: 8px;
+        padding: 15;
+        text-align: center;
+        animation-name: colores;
+        animation-duration: 10s;
+    }
+
+    .carousel-item {
+        height: auto;
+
+    }
+
+    img {
+        width: 50%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
-.tituloIndex{
-    margin: 8px;
-    padding: 15;
-    text-align: center;
-    animation-name: colores;
-    animation-duration: 10s;
+
+
+@keyframes colores {
+    from {
+        background-color: rgb(167, 18, 197);
+    }
+
+    to {
+        background-color: rgb(124, 200, 206)
+    }
 }
-  
-  @keyframes colores {
-    from {background-color: rgb(167, 18, 197);}
-    to {background-color: rgb(124, 200, 206)}
-  }
-.carousel-item{
-    height: auto;
-}
-.carousel-inner img {
-    width: 50%;
-    height: 100px;
-    display: flex;
-    align-items:center;
-    justify-content: center;
-}
+
 
 /*Nosotros*/
 .mainArticle {
     margin: 20px;
     margin-right: 20px;
 
-}
+    .tituloNosotros {
+        text-align: center;
+    }
 
-.historiaArticle {
-    margin: 5px 5px 5px 5px;
+    .historiaArticle {
+        margin: 5px 5px 5px 5px;
+        display: flex;
+        flex-flow: row;
 
-}
+        .imgArticle {
+            height: 20%;
+            width: 230px;
+            margin-right: 20px;
+            animation-name: aparecer;
+            animation-iteration-count: 1;
+            animation-duration: 4s;
+        }
 
-.textoHistoria,
-.textoArticle {
-    text-align: justify;
+        .textoHistoria,
+        .textoArticle {
+            text-align: justify;
+        }
+    }
 
+    .sectionNosotros {
+        margin-top: 40px;
 
-}
-
-.historiaArticle .imgArticle {
-    display: flex;
-    flex-flow: row;
-}
-
-.imgArticle {
-    height: 20%;
-    width: 230px;
-    margin-right: 20px;
-    animation-name: aparecer;
-    animation-iteration-count: 1;
-    animation-duration: 4s;
-}
-
-.doImg {
-    animation-name: desaparecer;
-    animation-iteration-count: 1;
-    animation-duration: 4s;
+        .doImg {
+            height: 20%;
+            width: 230px;
+            margin-right: 20px;
+            animation-name: desaparecer;
+            animation-iteration-count: 1;
+            animation-duration: 4s;
+        }
+    }
 }
 
 @keyframes aparecer {
@@ -182,24 +198,6 @@
     }
 }
 
-.doImg {
-
-    height: 20%;
-    width: 230px;
-    margin-right: 20px;
-}
-
-.sectionNosotros {
-    margin-top: 40px;
-}
-
-.historiaArticle .doImg {
-    float: left;
-    margin: 5px 10px 5px 5px;
-}
-.tituloNosotros{
-    text-align: center;
-}
 /*Productos*/
 
 .imgProductos {
@@ -216,32 +214,35 @@
     transform: scale(1.5);
 }
 
-/*Promociones*/
 
 
 /*Contacto*/
 .principalContacto {
     display: flex;
     flex-direction: wrap;
+
+    .contactoDiv {
+        margin: 30px;
+    }
+
+    form {
+        font-size: 25px;
+
+        .btn-primary:hover {
+            background-color: rgb(131, 4, 170);
+        }
+    }
 }
 
-.formulario {
-    margin: 30px;
-}
-.btn-primary:hover {
-    background-color: rgb(131, 4, 170);
-}
-
-form{
-    font-size: 25px;
-}
 /*Footer*/
-footer{
+footer {
     background-color: rgba(3, 2, 2, 0.2) !important;
+
+    .listaFooter {
+        list-style: none;
+    }
 }
-.listaFooter {
-    list-style: none;
-}
+
 
 @media screen and (min-width: 600px) {
     .hero__title-text {
@@ -276,21 +277,24 @@ footer{
         width: 100%;
         height: 560px;
         display: flex;
-        align-items:center;
+        align-items: center;
         justify-content: center;
     }
+
     .mainIndex {
         margin-left: 100px;
         margin-right: 100px;
     }
-    .tituloIndex{
+
+    .tituloIndex {
         margin: 15px;
         padding: 30px;
         text-align: center;
         animation-name: colores;
         animation-duration: 10s;
     }
-    table{
+
+    table {
         padding-left: 50px;
         padding-right: 50px;
     }
