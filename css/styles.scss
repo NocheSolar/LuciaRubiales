@@ -13,20 +13,51 @@
     background-attachment: fixed;
 }*/
 
-.contacto {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
+/* Variable*/
+$color1 :rgb(124, 200, 206);
+
+/*maps*/
+$colorBtn: (color1: rgba(2, 121, 233, 0.918),
+    color2: rgb(7, 163, 54),
+);
+
+@each $btn,
+$color in $colorBtn {
+    .btn-#{$btn} {
+        background-color: $color;
+    }
+}
+
+/*mixin*/
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
+.imgArticle {
+    @include sizes(250px, 200px);
+}
+
+.doImg {
+    @include sizes (300px, 250px)
+}
+
+/*Extend*/
+.bgimg {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
 }
 
+.contacto {
+    @extend .bgimg;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
+}
+
 .productos {
+    @extend .bgimg;
     background-image: url("../img/fondo8.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
 }
 
 .promociones {
@@ -62,12 +93,12 @@
 
     .hero__title-text {
         font-size: 7rem !important;
-        color: rgb(124, 200, 206);
+        color: $color1;
     }
 
     .hero__title-subtext {
         font-size: 2.5rem !important;
-        color: rgb(124, 200, 206);
+        color: $color1;
     }
 }
 
@@ -110,7 +141,7 @@
     }
 
     to {
-        background-color: rgb(124, 200, 206)
+        background-color: $color1;
     }
 }
 
@@ -125,14 +156,10 @@
     }
 
     .historiaArticle {
-        margin: 5px 5px 5px 5px;
         display: flex;
         flex-flow: row;
 
         .imgArticle {
-            height: 20%;
-            width: 230px;
-            margin-right: 20px;
             animation-name: aparecer;
             animation-iteration-count: 1;
             animation-duration: 4s;
@@ -148,9 +175,6 @@
         margin-top: 40px;
 
         .doImg {
-            height: 20%;
-            width: 230px;
-            margin-right: 20px;
             animation-name: desaparecer;
             animation-iteration-count: 1;
             animation-duration: 4s;
@@ -219,6 +243,7 @@
 /*Contacto*/
 .containerContacto {
     height: 100vh;
+
     .principalContacto {
         display: flex;
         flex-direction: wrap;

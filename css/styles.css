@@ -13,6 +13,22 @@
     background-position: center center;
     background-attachment: fixed;
 }*/
+/* Variable*/
+/*maps*/
+.btn-color1 {
+  background-color: rgba(2, 121, 233, 0.918);
+}
+
+.btn-color2 {
+  background-color: #07a336;
+}
+
+/*mixin*/
+.box {
+  height: 50px;
+  width: 500px;
+}
+
 .contacto {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../img/fondo4.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../img/fondo4.jpg");
