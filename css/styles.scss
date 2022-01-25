@@ -156,9 +156,6 @@ $color in $colorBtn {
     }
 
     .historiaArticle {
-        display: flex;
-        flex-flow: row;
-
         .imgArticle {
             animation-name: aparecer;
             animation-iteration-count: 1;
@@ -264,6 +261,8 @@ $color in $colorBtn {
 
 /*Footer*/
 footer {
+    position: fixed;
+    bottom: 0%;
     background-color: rgba(3, 2, 2, 0.2) !important;
 
     .listaFooter {
